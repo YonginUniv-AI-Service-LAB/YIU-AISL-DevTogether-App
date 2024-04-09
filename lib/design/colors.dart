@@ -4,8 +4,8 @@ abstract class ColorStyles {
   ColorStyles._();
 
   // 앱 시그니처 컬러
-  static const appMainColor = Color(0xff595c86);
-  static const appSubColor = Color(0xff696c96);
+  static const appMainColor = Color(0xff68568e);
+  static const appSubColor = Color(0xffB3AAC6);
   static const appLightColor = Color(0xffD9EDDF);
   static const appBackgroundColor = Color(0xffF0FCF6);
 
