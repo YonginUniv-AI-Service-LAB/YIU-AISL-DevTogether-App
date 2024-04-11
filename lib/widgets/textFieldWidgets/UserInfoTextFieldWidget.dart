@@ -24,13 +24,13 @@ Container UserInfoTextFieldWidget(
           labelText: labelText,
           labelStyle: const TextStyle(
             color: ColorStyles.textBodyColor,
-            // fontFamily: 'Pretendard',
+            fontFamily: 'Pretendard',
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
           hintText: hintText,
           hintStyle: const TextStyle(
-            // fontFamily: 'Pretendard',
+            fontFamily: 'Pretendard',
             fontSize: 18,
             fontWeight: FontWeight.w300,
           )
