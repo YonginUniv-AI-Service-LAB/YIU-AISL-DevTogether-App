@@ -92,6 +92,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           obscureText: true,
                           // controller: pwdController,
                         ),
+                        UserInfoTextFieldWidget(
+                          labelText: "나이",
+                          hintText: "나이 입력",
+                          obscureText: true,
+                          // controller: pwdController,
+                        ),
+                        UserInfoTextFieldWidget(
+                          labelText: "성별",
+                          hintText: "남자일 경우 '남자', 여자일 경우 '여자' 입력 (작은 따옴표 제외)",
+                          obscureText: true,
+                          // controller: pwdController,
+                        ),
                       ]),
                     ),
 
@@ -100,9 +112,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       margin: const EdgeInsets.only(bottom: 50),
                       child: Column(children: [
                         DefaultSectionTitleWidget(
-                            title: '학적',
+                            title: '멘토 or 멘티',
                             subtitle:
-                            '- 학생은 학년과 현재 학적 상태를 정확하게 선택\n- 교수 및 직원은 해당없음을 선택',
+                            '- 멘토/멘티 선택\n- 멘토와 멘티를 다 선택하고 싶다면 멘토/멘티를 선택\n- 학력은 최종 학력을 기준으로 입력해주세요.',
                             titleColor: ColorStyles.textBlackColor,
                             subtitleColor: ColorStyles.textBodyColor),
                         DropDownListWidget(
@@ -115,14 +127,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             }),
                         DropDownListWidget(
                             margin: const EdgeInsets.only(bottom: 15),
-                            items: userGradeList,
-                            hintText: '학년',
-                            initialItem: gradeValue,
-                            onChanged: (value) {
-                              gradeValue = value;
-                            }),
-                        DropDownListWidget(
-                            margin: const EdgeInsets.only(bottom: 15),
                             items: userStatus.keys.toList(),
                             hintText: '학적 상태',
                             initialItem: statusValue,
@@ -132,39 +136,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ]),
                     ),
 
-                    // 전공 입력 섹션
+                    // 수업 지역 선택
                     Container(
                       margin: const EdgeInsets.only(bottom: 50),
                       child: Column(children: [
                         DefaultSectionTitleWidget(
-                            title: '전공',
+                            title: '수업 지역',
                             subtitle:
-                            '- 단일전공 학생은 전공1만 선택, 전공2와 전공3은 해당없음을 선택\n- 복수전공, 부전공 학생은 전공2와 전공3을 선택\nex) 주전공+부전공 학생은 전공1에 주전공, 전공2에 부전공 선택',
+                            '- 수업 지역 선택\n- 첫번째 선택은 필수\n- 두번째, 세번째 지역 선택은 옵션입니다.',
                             titleColor: ColorStyles.textBlackColor,
                             subtitleColor: ColorStyles.textBodyColor),
                         DropDownListWidget(
                             margin: const EdgeInsets.only(bottom: 15),
-                            items: subjectList.keys.toList(),
-                            hintText: '전공1',
-                            initialItem: null,
+                            items: userRole.keys.toList(),
+                            hintText: '구분',
+                            initialItem: roleValue,
                             onChanged: (value) {
-                              subject1Value = value;
+                              roleValue = value;
                             }),
                         DropDownListWidget(
                             margin: const EdgeInsets.only(bottom: 15),
-                            items: subjectListIncludeNot.keys.toList(),
-                            hintText: '전공2',
-                            initialItem: subject2Value,
+                            items: userStatus.keys.toList(),
+                            hintText: '학적 상태',
+                            initialItem: statusValue,
                             onChanged: (value) {
-                              subject2Value = value;
-                            }),
-                        DropDownListWidget(
-                            margin: const EdgeInsets.only(bottom: 15),
-                            items: subjectListIncludeNot.keys.toList(),
-                            hintText: '전공3',
-                            initialItem: subject3Value,
-                            onChanged: (value) {
-                              subject3Value = value;
+                              statusValue = value;
                             }),
                       ]),
                     ),
