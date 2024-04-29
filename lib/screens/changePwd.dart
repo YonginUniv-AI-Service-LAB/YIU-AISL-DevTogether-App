@@ -73,7 +73,13 @@ class _ChangePasswordFormScreenState extends State<ChangePasswordFormScreen> {
           titleColor: ColorStyles.textBlackColor,
           subtitleColor: ColorStyles.textBodyColor),
       UserInfoTextFieldWidget(
-        labelText: "비밀번호",
+        labelText: "새 비밀번호",
+        hintText: "영문자+특수문자+숫자 포함 8자리 이상",
+        obscureText: true,
+        // controller: pwdController,
+      ),
+      UserInfoTextFieldWidget(
+        labelText: "새 비밀번호 확인",
         hintText: "영문자+특수문자+숫자 포함 8자리 이상",
         obscureText: true,
         // controller: pwdController,

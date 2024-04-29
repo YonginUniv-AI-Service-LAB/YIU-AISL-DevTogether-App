@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           child: child!,
       ),
       debugShowCheckedModeBanner: false,
-      home: ChangePasswordFormScreen(key: key)
+      home: RegisterScreen(key: key)
     );
   }
 }

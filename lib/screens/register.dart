@@ -87,6 +87,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           // controller: pwdController,
                         ),
                         UserInfoTextFieldWidget(
+                          labelText: "비밀번호 확인",
+                          hintText: "영문자+특수문자+숫자 포함 8자리 이상",
+                          obscureText: true,
+                          // controller: pwdController,
+                        ),
+                        UserInfoTextFieldWidget(
                           labelText: "닉네임",
                           hintText: "닉네임 입력",
                           obscureText: true,
