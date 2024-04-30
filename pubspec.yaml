@@ -72,6 +72,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/image/profile.jpg
 #    - .env
 
   fonts:
