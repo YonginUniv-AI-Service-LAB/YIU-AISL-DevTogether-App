@@ -1,3 +1,4 @@
+import 'package:devtogether/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 
@@ -25,27 +26,45 @@ class SlideMenu extends StatelessWidget implements PreferredSizeWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.home,
+              Icons.face,
               color: ColorStyles.textBlackColor,),
-            title: Text('1번 메뉴'),
+            title: Text('학생 찾기'),
             onTap: (){
               print('1번 메뉴 클릭');
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.home,
+              Icons.school,
               color: ColorStyles.textBlackColor,),
-            title: Text('2번 메뉴'),
+            title: Text('선생님 찾기'),
             onTap: (){
               print('2번 메뉴 클릭');
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.home,
+              Icons.people,
               color: ColorStyles.textBlackColor,),
-            title: Text('3번 메뉴'),
+            title: Text('커뮤니티'),
+            onTap: (){
+              print('3번 메뉴 클릭');
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.campaign,
+              color: ColorStyles.textBlackColor,),
+            title: Text('공지사항'),
+            onTap: (){
+              print('3번 메뉴 클릭');
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.quiz,
+              color: ColorStyles.textBlackColor,),
+            title: Text('자주묻는질문'),
             onTap: (){
               print('3번 메뉴 클릭');
             },
