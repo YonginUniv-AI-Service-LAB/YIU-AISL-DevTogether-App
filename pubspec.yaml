@@ -73,6 +73,7 @@ flutter:
   assets:
     - assets/
     - assets/image/profile.jpg
+    - assets/image/jjang9.jpg
 #    - .env
 
   fonts:
