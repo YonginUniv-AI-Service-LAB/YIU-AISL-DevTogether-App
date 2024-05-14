@@ -11,9 +11,9 @@ abstract class ColorStyles {
   static const appBackgroundColor = Color(0xffF0F0F0);
 
 // 기본 및 알림 색상
-//   static const lightGrayColor = Color(0xffF1F1F1);
-//   static const correctColor = Color(0xff0094FF);
-//   static const errorColor = Color(0xffF56647);
+  static const gray_dark = Color(0xff424242);
+  static const gray_mid = Color(0xff666666);
+  static const gray_light = Color(0xfff0f0f0);
 
 // 텍스트 색상
   static const textBlackColor = Color(0xff424242);
