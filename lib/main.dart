@@ -1,9 +1,15 @@
-import 'package:devtogether/screens/Main/login.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:devtogether/design/colors.dart';
+import 'package:devtogether/routes.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await dotenv.load(fileName: '.env');
+  // ex) dotenv.load(fileName: 'assets/config/.env')
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,10 +18,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // routerConfig: routes,
-      title: 'DevTogether',
+    return MaterialApp.router(
+      routerConfig: routes,
+      title: 'GRANITY',
+      // home: LoginScreen(),
+      color: ColorStyles.appMainColor,
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle(
+            // Status bar color
+            statusBarColor: Colors.white, // 안드로이드만?? (iOS에서는 아무 변화없음)
+            statusBarIconBrightness: Brightness.dark,
+            // statusBarBrightness: Brightness.light, // iOS에서 먹히는 설정(검정 글씨로 표시됨)
+          ),
+        ),
         primaryColor: ColorStyles.appMainColor,
         focusColor: ColorStyles.appMainColor,
         hoverColor: ColorStyles.appMainColor,
@@ -23,14 +40,14 @@ class MyApp extends StatelessWidget {
         const TextSelectionThemeData(cursorColor: ColorStyles.appMainColor),
         fontFamily: 'Pretendard',
       ),
+      // routes: routes,
       builder: (context, child) => MediaQuery(
-          data: MediaQuery.of(context).copyWith(
-            textScaler: const TextScaler.linear(1.0),
-          ),
-          child: child!,
+        data: MediaQuery.of(context).copyWith(
+          textScaler: const TextScaler.linear(1.0),
+        ),
+        child: child!,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(key: key)
     );
   }
 }
