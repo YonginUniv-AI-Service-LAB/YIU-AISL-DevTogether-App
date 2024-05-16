@@ -20,8 +20,8 @@ abstract class ColorStyles {
   static const textBodyColor = Color(0xff666666);
   static const textDisableColor = Color(0xffD5D5D5);
 
-// 졸업요건 상태
-//   static const statusGreen = Color(0xff568A35);
-//   static const statusYellow = Color(0xffFFCD4A);
-//   static const statusRed = Color(0xffFC5230);
+// 공지사항 색상
+  static const statusGreen = Color(0xff568A35);
+  static const statusYellow = Color(0xffFFCD4A);
+  static const statusRed = Color(0xffFC5230);
 }

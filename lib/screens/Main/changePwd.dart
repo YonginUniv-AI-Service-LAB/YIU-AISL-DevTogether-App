@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:devtogether/widgets/BaseAppBar.dart';
-import 'package:devtogether/widgets/buttonWidgets/MainColorButton.dart';
-import 'package:devtogether/widgets/textFieldWidgets/TextFieldButton.dart';
+import 'package:devtogether/widgets/baseAppBar.dart';
+import 'package:devtogether/widgets/buttonWidgets/mainColorButton.dart';
+import 'package:devtogether/widgets/textFieldWidgets/textFieldButton.dart';
 
-import '../design/colors.dart';
-import '../widgets/groupWidgets/DefaultSectionTitle.dart';
-import '../widgets/textFieldWidgets/UserInfoTextFieldWidget.dart';
+import '../../design/colors.dart';
+import '../../widgets/groupWidgets/defaultSectionTitle.dart';
+import '../../widgets/textFieldWidgets/userInfoTextFieldWidget.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 

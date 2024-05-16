@@ -1,6 +1,4 @@
-import 'package:devtogether/screens/changePwd.dart';
-import 'package:devtogether/screens/login.dart';
-import 'package:devtogether/screens/register.dart';
+import 'package:devtogether/screens/Main/login.dart';
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 
@@ -32,7 +30,7 @@ class MyApp extends StatelessWidget {
           child: child!,
       ),
       debugShowCheckedModeBanner: false,
-      home: RegisterScreen(key: key)
+      home: LoginScreen(key: key)
     );
   }
 }

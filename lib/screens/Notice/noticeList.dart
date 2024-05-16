@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:devtogether/data/noticeList.dart';
-import 'package:devtogether/widgets/BaseAppBar.dart';
-import 'package:devtogether/widgets/groupWidgets/NoticeItem.dart';
+import 'package:devtogether/widgets/baseAppBar.dart';
+import 'package:devtogether/widgets/groupWidgets/noticeItem.dart';
 
 class NoticeListScreen extends StatefulWidget {
   const NoticeListScreen({super.key});

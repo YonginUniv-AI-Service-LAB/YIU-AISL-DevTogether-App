@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 import 'package:flutter/widgets.dart';
 
-import '../widgets/BaseAppBar.dart';
-import '../widgets/slideMenu.dart';
+import '../../widgets/baseAppBar.dart';
+import '../../widgets/slideMenu.dart';
 
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);

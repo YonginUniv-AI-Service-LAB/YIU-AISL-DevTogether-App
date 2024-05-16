@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
-import 'package:devtogether/widgets/textFieldWidgets/UserInfoTextFieldWidget.dart';
+import 'package:devtogether/widgets/textFieldWidgets/userInfoTextFieldWidget.dart';
 
 // 텍스트필드 + 버튼 ex) 회원가입 이메일 인증
 Container TextFieldButtonWidget(

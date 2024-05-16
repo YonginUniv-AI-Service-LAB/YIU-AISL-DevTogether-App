@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:devtogether/widgets/buttonWidgets/MainColorButton.dart';
-import 'package:devtogether/widgets/buttonWidgets/MainColorOutlinedButton.dart';
-import 'package:devtogether/widgets/buttonWidgets/UnderlineTextButton.dart';
-import 'package:devtogether/widgets/textFieldWidgets/UserInfoTextFieldWidget.dart';
+import 'package:devtogether/widgets/buttonWidgets/mainColorButton.dart';
+import 'package:devtogether/widgets/buttonWidgets/mainColorOutlinedButton.dart';
+import 'package:devtogether/widgets/buttonWidgets/underlineTextButton.dart';
+import 'package:devtogether/widgets/textFieldWidgets/userInfoTextFieldWidget.dart';
 
 class LoginScreen extends StatelessWidget {
   final idController = TextEditingController();

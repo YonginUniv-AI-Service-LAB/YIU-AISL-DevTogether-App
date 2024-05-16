@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 // import 'package:devtogether/data/majorList.dart';
 // import 'package:devtogether/data/userInfo.dart';
 import 'package:devtogether/design/colors.dart';
-import 'package:devtogether/widgets/BaseAppBar.dart';
-import 'package:devtogether/widgets/buttonWidgets/MainColorButton.dart';
-import 'package:devtogether/widgets/groupWidgets/DefaultSectionTitle.dart';
-import 'package:devtogether/widgets/textFieldWidgets/DropdownList.dart';
-import 'package:devtogether/widgets/textFieldWidgets/TextFieldButton.dart';
-import 'package:devtogether/widgets/textFieldWidgets/UserInfoTextFieldWidget.dart';
+import 'package:devtogether/widgets/baseAppBar.dart';
+import 'package:devtogether/widgets/buttonWidgets/mainColorButton.dart';
+import 'package:devtogether/widgets/groupWidgets/defaultSectionTitle.dart';
+import 'package:devtogether/widgets/textFieldWidgets/dropdownList.dart';
+import 'package:devtogether/widgets/textFieldWidgets/textFieldButton.dart';
+import 'package:devtogether/widgets/textFieldWidgets/userInfoTextFieldWidget.dart';
 
-import '../data/subjectList.dart';
-import '../data/userInfo.dart';
+import '../../data/subjectList.dart';
+import '../../data/userInfo.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 

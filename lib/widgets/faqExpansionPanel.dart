@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
-import '../data/Faq.dart';
+import '../data/faq.dart';
 
 class FaqExpansionPanel extends StatefulWidget implements PreferredSizeWidget {
   const FaqExpansionPanel({Key? key}) : super(key: key);

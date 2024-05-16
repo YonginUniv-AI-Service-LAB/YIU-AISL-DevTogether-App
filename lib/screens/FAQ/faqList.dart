@@ -1,10 +1,10 @@
 import 'package:devtogether/widgets/appbarTitle.dart';
 import 'package:devtogether/widgets/faqExpansionPanel.dart';
-import 'package:devtogether/widgets/groupWidgets/DefaultSectionTitle.dart';
+import 'package:devtogether/widgets/groupWidgets/defaultSectionTitle.dart';
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 
-import '../widgets/slideMenu.dart';
+import '../../widgets/slideMenu.dart';
 
 class FaqScreen extends StatelessWidget {
   const FaqScreen({Key? key}) : super(key: key);
