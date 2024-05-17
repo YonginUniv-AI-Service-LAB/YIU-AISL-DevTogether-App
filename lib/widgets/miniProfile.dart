@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 
+import '../data/studentList.dart';
+
 class MiniProfile extends StatefulWidget implements PreferredSizeWidget {
   const MiniProfile({Key? key}) : super(key: key);
 
@@ -21,7 +23,7 @@ class _MiniProfileState extends State<MiniProfile> {
       color: ColorStyles.gray_light,
       child: GridView.builder(
         padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-          itemCount: 90,
+          itemCount: mentee_test_data.length,
           gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
@@ -29,6 +31,7 @@ class _MiniProfileState extends State<MiniProfile> {
             mainAxisSpacing: 12,
           ),
           itemBuilder: ((context, index) {
+            dynamic mentee = mentee_test_data[index];
             return Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -44,28 +47,45 @@ class _MiniProfileState extends State<MiniProfile> {
                     height: 50,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(125),
-                      child: Image(image: AssetImage('assets/image/jjang9.jpg'), fit: BoxFit.cover,),
+                      child: Image(image: AssetImage(mentee['image']), fit: BoxFit.cover,),
                     ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 5),
-                    child: Text('산타짱구', style: TextStyle(
+                    child: Text(mentee['nickname'], style: TextStyle(
                         fontSize: 15,
                         color: ColorStyles.textBlackColor,
                         fontWeight: FontWeight.bold
                     ),),
                   ),
                   Container(
-                    child: Text('선물 받을 사람 여기여기 붙어라', style: TextStyle(
+                    child: Text(mentee['info'], style: TextStyle(
                         fontSize: 10,
                         color: ColorStyles.textBodyColor
                     ),),
                   ),
-                  Container(
-                    child: Text('자바 / 자바스프링', style: TextStyle(
-                        fontSize: 13,
-                        color: ColorStyles.textBodyColor
-                    ),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        child: Text(mentee['subject1'], style: TextStyle(
+                            fontSize: 13,
+                            color: ColorStyles.textBodyColor
+                        ),),
+                      ),
+                      Container(
+                        child: Text(' / ', style: TextStyle(
+                            fontSize: 13,
+                            color: ColorStyles.textBodyColor
+                        ),),
+                      ),
+                      Container(
+                        child: Text(mentee['subject2'], style: TextStyle(
+                            fontSize: 13,
+                            color: ColorStyles.textBodyColor
+                        ),),
+                      ),
+                    ],
                   ),
                 ],
               ),
