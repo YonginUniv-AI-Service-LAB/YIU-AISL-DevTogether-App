@@ -2,6 +2,7 @@ import 'dart:html';
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:devtogether/data/myInfo.dart';
 import 'package:devtogether/widgets/miniProfile.dart';
 import 'package:devtogether/widgets/reviews.dart';
 import 'package:devtogether/widgets/twit.dart';
@@ -28,6 +29,7 @@ class _MyProfileState extends State<MyProfile> with SingleTickerProviderStateMix
 
   @override
   Widget build(BuildContext context) {
+    dynamic user = myinfo_test_data[0];
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
@@ -64,7 +66,7 @@ class _MyProfileState extends State<MyProfile> with SingleTickerProviderStateMix
                                 child: Container(
                                     color: ColorStyles.appBackgroundColor,
                                     padding: EdgeInsets.all(5),
-                                    child: Image(image: AssetImage('assets/image/profile.jpg'),)
+                                    child: Image(image: AssetImage(user['image']),)
                                 )
                             ),
                             Container(
@@ -88,21 +90,42 @@ class _MyProfileState extends State<MyProfile> with SingleTickerProviderStateMix
                             margin: EdgeInsets.only(top: 10),
                             child: Column(
                               children: [
-                                Text('꽃을 든 맹구', style: TextStyle(
+                                Text(user['name'], style: TextStyle(
                                   color: ColorStyles.textBlackColor,
                                   fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                   fontFamily: 'Pretandard'
                                 ),),
-                                Text('멘토', style: TextStyle(
+                                Text(user['role'], style: TextStyle(
                                   color: ColorStyles.textBlackColor,
                                   fontFamily: 'Pretandard',
                                   fontWeight: FontWeight.bold,
                                 ),),
-                                Text('자바 / 자바스프링 / 백엔드', style: TextStyle(
-                                    color: ColorStyles.textBlackColor,
-                                    fontFamily: 'Pretandard'
-                                ),)
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(user['subject1'], style: TextStyle(
+                                        color: ColorStyles.textBlackColor,
+                                        fontFamily: 'Pretandard'
+                                    ),),
+                                    Text(' / ', style: TextStyle(
+                                        color: ColorStyles.textBlackColor,
+                                        fontFamily: 'Pretandard'
+                                    ),),
+                                    Text(user['subject2'], style: TextStyle(
+                                        color: ColorStyles.textBlackColor,
+                                        fontFamily: 'Pretandard'
+                                    ),),
+                                    Text(' / ', style: TextStyle(
+                                        color: ColorStyles.textBlackColor,
+                                        fontFamily: 'Pretandard'
+                                    ),),
+                                    Text(user['subject3'], style: TextStyle(
+                                        color: ColorStyles.textBlackColor,
+                                        fontFamily: 'Pretandard'
+                                    ),),
+                                  ],
+                                )
                               ],
                             ),
                           ),

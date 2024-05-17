@@ -80,6 +80,12 @@ flutter:
     - assets/
     - assets/image/profile.jpg
     - assets/image/jjang9.jpg
+    - assets/image/fe.jpg
+    - assets/image/daddy.jpg
+    - assets/image/glass.jpg
+    - assets/image/hooni.jpg
+    - assets/image/professor.jpg
+    - assets/image/white.jpg
 #    - .env
 
   fonts:

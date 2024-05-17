@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:devtogether/design/colors.dart';
 
+import '../data/reviewList.dart';
+
 class Reviews extends StatefulWidget implements PreferredSizeWidget {
   const Reviews({Key? key}) : super(key: key);
 
@@ -18,8 +20,9 @@ class _ReviewsState extends State<Reviews> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 10,
+      itemCount: review_test_data.length,
       itemBuilder: (context, index) {
+        dynamic review = review_test_data[index];
         return Container(
           padding: const EdgeInsets.symmetric(vertical: 5),
           width: MediaQuery.of(context).size.width,
@@ -31,13 +34,12 @@ class _ReviewsState extends State<Reviews> {
                   margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
                   child: Row(
                     children: [
-                      // Image(image: AssetImage('assets/image/profile.jpg'),)
                       Container(
                         width: 50,
                         height: 50,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(125),
-                          child: Image(image: AssetImage('assets/image/jjang9.jpg'), fit: BoxFit.cover,),
+                          child: Image(image: AssetImage(review['image']), fit: BoxFit.cover,),
                         ),
                       ),
                       Container(
@@ -45,12 +47,12 @@ class _ReviewsState extends State<Reviews> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('산타짱구', style: TextStyle(
+                            Text(review['nickname'], style: TextStyle(
                               fontSize: 15,
                               color: ColorStyles.textBlackColor,
                               fontWeight: FontWeight.bold
                             ),),
-                            Text('선물 받을 사람 여기여기 붙어라', style: TextStyle(
+                            Text(review['info'], style: TextStyle(
                               fontSize: 10,
                               color: ColorStyles.textBodyColor
                             ),),
@@ -63,7 +65,7 @@ class _ReviewsState extends State<Reviews> {
                 Container(
                   margin: EdgeInsets.only(left: 70),
                   alignment: Alignment.centerLeft,
-                  child: Text('맹구 선생님 콧물 너무 많이 흘려서 짜증나여;;;;;;', style: TextStyle(
+                  child: Text(review['content'], style: TextStyle(
                     fontSize: 15,
                     color: ColorStyles.textBlackColor
                   ),)

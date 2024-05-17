@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: routes,
-      title: 'GRANITY',
+      title: 'DEVTOGETHER',
       // home: LoginScreen(),
       color: ColorStyles.appMainColor,
       theme: ThemeData(
